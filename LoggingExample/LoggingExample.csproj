@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="NLog" Version="4.5.0-rc03" />
+    <PackageReference Include="NLog.Extensions.Logging" Version="1.0.0-rtm-rc5" />
+    <PackageReference Include="NLog.StructuredLogging.Json" Version="2.0.0-beta-180" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="nlog.config" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>
