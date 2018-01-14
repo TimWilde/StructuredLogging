@@ -14,6 +14,8 @@ namespace LoggingExample
 
             logger.Info("Hello World!");
             logger.ExtendedInfo("Extended Greetings!", new {WordOfTheDay = "Jibble"});
+            logger.ExtendedInfo("Different Value Types 1", new {Number = 12345});
+            logger.ExtendedInfo("Different Value Types 2", new {Number = "Qwer?"});
 
             logger.Factory.Flush();
         }
