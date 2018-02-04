@@ -2,13 +2,13 @@ version: '3'
 
 services:
   elasticsearch:
-    image: docker.elastic.co/elasticsearch/elasticsearch-oss:6.1.3
+    image: docker.elastic.co/elasticsearch/elasticsearch-oss:6.1.2
     command: elasticsearch -Enode.name=derp -Ecluster.name=logging
     ports:
       - "9200:9200"
 
   logstash:
-    image: docker.elastic.co/logstash/logstash-oss:6.1.3
+    image: docker.elastic.co/logstash/logstash-oss:6.1.2
     command: logstash -f /etc/logstash/conf.d/logstash.conf
     volumes:
     - ./logstash:/etc/logstash/conf.d
@@ -16,6 +16,6 @@ services:
     - "5000:5000"
 
   kibana:
-    image: docker.elastic.co/kibana/kibana-oss:6.1.3
+    image: docker.elastic.co/kibana/kibana-oss:6.1.2
     ports:
       - "5601:5601"
